@@ -1,0 +1,1 @@
+c:\jason\app\jdk-17.0.10\bin\java -cp E:\jason\back_lkm\taxone-mapper-api\src\main\resources; -jar target\taxone-mapper-api.jar > taxone-mapper-api.txt

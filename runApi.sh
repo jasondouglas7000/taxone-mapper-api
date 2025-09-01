@@ -1,0 +1,1 @@
+java -jar taxone-mapper-api.jar > taxone-mapper-api.txt

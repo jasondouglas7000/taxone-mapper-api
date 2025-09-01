@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mappper-taxone-backend-2
+  labels:
+    app: mappper-taxone-backend 
+spec:
+  containers:
+  - name: mappper-taxone-backend-image
+    image: docker.io/jasondouglasoliveira333/java:3333333313
+    env:
+      - name: OUR_PARAMS
+        value: OUR_VALUE
+      - name: OUR_PARAMS2
+        value: OUR_VALUE2
+    ports:
+      - containerPort: 8180
