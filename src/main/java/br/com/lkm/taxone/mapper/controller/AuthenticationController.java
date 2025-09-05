@@ -7,8 +7,10 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.lkm.taxone.mapper.dto.AutenticationRequest;
@@ -45,6 +47,23 @@ public class AuthenticationController {
             final String token = jwtTokenUtil.generateToken(userDetails);
             return ResponseEntity.ok(new AutenticationResponse(token));
 		} catch (DisabledException | BadCredentialsException e ) {
+			log.error("Error autenticando o uruario", e);
+			return ResponseEntity.badRequest().build();
+		}
+	}
+    
+    @GetMapping("/validateToken")
+    public ResponseEntity<String> createAuthenticationToken(@RequestParam(name="token", required=false) String token) throws Exception {
+        try {
+        	log.info("In AuthenticationController.validateToken");
+            final String userName = jwtTokenUtil.getUsernameFromToken(token);
+            if (userName != null){
+                log.info("userName:" + userName);
+            }else{
+                log.info("userName is null");
+            }
+            return ResponseEntity.ok(userName);
+		} catch (Exception e ) {
 			log.error("Error autenticando o uruario", e);
 			return ResponseEntity.badRequest().build();
 		}
