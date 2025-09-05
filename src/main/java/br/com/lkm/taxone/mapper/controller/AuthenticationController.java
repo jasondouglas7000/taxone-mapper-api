@@ -52,17 +52,16 @@ public class AuthenticationController {
 		}
 	}
     
-    @GetMapping("/validateToken")
-    public ResponseEntity<String> validateToken(@RequestParam(name="token", required=false) String token) throws Exception {
+    @GetMapping("/validateCustomerName")
+    public ResponseEntity<String> validateToken(@RequestParam(name="name", required=false) String customerName) throws Exception {
         try {
-        	log.info("In AuthenticationController.validateToken");
-            final String userName = jwtTokenUtil.getUsernameFromToken(token);
-            if (userName != null){
-                log.info("userName:" + userName);
+        	log.info("In AuthenticationController.validateCustomerName");
+            if (customerName != null){
+                log.info("customerName:" + customerName);
             }else{
-                log.info("userName is null");
+                log.info("customerName is null");
             }
-            return ResponseEntity.ok(userName);
+            return ResponseEntity.ok(customerName);
 		} catch (Exception e ) {
 			log.error("Error autenticando o uruario", e);
 			return ResponseEntity.badRequest().build();
