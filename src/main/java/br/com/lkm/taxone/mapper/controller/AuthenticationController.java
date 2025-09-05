@@ -53,7 +53,7 @@ public class AuthenticationController {
 	}
     
     @GetMapping("/validateToken")
-    public ResponseEntity<String> createAuthenticationToken(@RequestParam(name="token", required=false) String token) throws Exception {
+    public ResponseEntity<String> validateToken(@RequestParam(name="token", required=false) String token) throws Exception {
         try {
         	log.info("In AuthenticationController.validateToken");
             final String userName = jwtTokenUtil.getUsernameFromToken(token);
