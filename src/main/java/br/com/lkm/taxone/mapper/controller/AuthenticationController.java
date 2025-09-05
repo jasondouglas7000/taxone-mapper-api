@@ -56,7 +56,7 @@ public class AuthenticationController {
     public ResponseEntity<String> validateToken(@RequestParam(name="name", required=false) String customerName) throws Exception {
         try {
         	log.info("In AuthenticationController.validateCustomerName");
-            if (customerName != null){
+            if (customerName.equals("me")){
                 log.info("customerName:" + customerName);
             }else{
                 log.info("customerName is null");
