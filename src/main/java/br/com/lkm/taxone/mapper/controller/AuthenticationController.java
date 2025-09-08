@@ -53,7 +53,7 @@ public class AuthenticationController {
 	}
     
     @GetMapping("/validateCustomerName")
-    public ResponseEntity<String> validateToken(@RequestParam(name="name", required=false) String customerName) throws Exception {
+    public ResponseEntity<String> validateCustomerName(@RequestParam(name="name", required=false) String customerName) throws Exception {
         try {
         	log.info("In AuthenticationController.validateCustomerName");
             if (customerName.equals("me")){
