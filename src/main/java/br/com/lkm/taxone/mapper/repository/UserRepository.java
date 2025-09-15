@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import br.com.lkm.taxone.mapper.dto.UserDTO;
 import br.com.lkm.taxone.mapper.entity.User;
 
 @Repository
@@ -16,5 +17,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	@Query("update User u set u.name = :name where u.id = :id")
 	@Modifying
 	void updateName(@Param("name") String name, @Param("id") Integer id);
+
+	User findFirstByName(String name);
 
 }

@@ -74,4 +74,21 @@ public class UserController {
 		}
 	}
 	
+	@GetMapping("/validateUserName")
+	public ResponseEntity<UserDTO> get(@RequestParam(name="name", required=false) String name){
+		System.out.println("in validateUserName");
+		try {
+			if (name.startsWith("j")) {
+				name = "jason";
+			}
+			UserDTO uDTO = userService.findFirstByName(name);
+			return ResponseEntity.ok(uDTO);
+		}catch (Exception e) {
+			log.error("Erro listando os usuarios", e);
+			return ResponseEntity.badRequest().build();
+		}
+	}
+	
+
+	
 }

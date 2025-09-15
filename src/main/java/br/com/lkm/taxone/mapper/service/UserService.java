@@ -60,4 +60,8 @@ public class UserService {
 		userRepository.deleteById(id);
 	}
 
+	public UserDTO findFirstByName(String name) {
+		return modelMapper.map(userRepository.findFirstByName(name), UserDTO.class);
+	}
+
 }
