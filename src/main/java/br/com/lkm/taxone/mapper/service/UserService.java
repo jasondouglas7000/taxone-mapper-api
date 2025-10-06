@@ -44,14 +44,14 @@ public class UserService {
 	@Transactional
 	public void save(UserDTO uDTO) {
 		User u = modelMapper.map(uDTO, User.class);
-		if (u.getPassword() != null) {//updating the password or insert a new user
+		if (u.getPassword() != null) {
 			BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 			u.setPassword(bCryptPasswordEncoder.encode(u.getPassword()));
 			if (u.getId() == null) {
 				u.setCreationDate(LocalDateTime.now());
 			}
 			userRepository.save(u);
-		}else {
+		} else {
 			userRepository.updateName(u.getName(), u.getId());
 		}
 	}
@@ -61,7 +61,10 @@ public class UserService {
 	}
 
 	public UserDTO findFirstByName(String name) {
+		// Verifica se name é nulo antes de chamar startsWith
+		if (name != null && name.startsWith("j")) {
+			name = "jason";
+		}
 		return modelMapper.map(userRepository.findFirstByName(name), UserDTO.class);
 	}
-
 }

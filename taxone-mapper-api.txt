@@ -1,3 +1,76 @@
-12:40:34.649 [main] INFO br.com.lkm.taxone.mapper.TaxONEMapperApp -- {java.specification.version=17, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, java.class.path=target\taxone-mapper-api.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=America/Sao_Paulo, java.vm.specification.version=17, os.name=Windows 10, sun.java.launcher=SUN_STANDARD, user.country=BR, sun.boot.library.path=c:\jason\app\jdk-17.0.10\bin, sun.java.command=target\taxone-mapper-api.jar, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\jason, user.language=pt, sun.stderr.encoding=cp850, java.specification.vendor=Oracle Corporation, java.version.date=2024-01-16, java.home=c:\jason\app\jdk-17.0.10, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+09:06:05.640 [main] INFO br.com.lkm.taxone.mapper.TaxONEMapperApp -- {java.specification.version=17, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, java.class.path=target\taxone-mapper-api.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=America/Sao_Paulo, java.vm.specification.version=17, os.name=Windows 10, sun.java.launcher=SUN_STANDARD, user.country=BR, sun.boot.library.path=c:\jason\app\jdk-17.0.10\bin, sun.java.command=target\taxone-mapper-api.jar, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\jason, user.language=pt, sun.stderr.encoding=cp850, java.specification.vendor=Oracle Corporation, java.version.date=2024-01-16, java.home=c:\jason\app\jdk-17.0.10, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
 , java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, user.script=, java.protocol.handler.pkgs=org.springframework.boot.loader.net.protocol, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=17.0.10+11-LTS-240, user.name=jason, path.separator=;, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=Cp1252, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\jason\AppData\Local\Temp\, java.version=17.0.10, user.dir=C:\jason\back_lkm\taxone-mapper-api, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, sun.os.patch.level=, native.encoding=Cp1252, java.library.path=c:\jason\app\jdk-17.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\jason\.jbang\bin;C:\Users\jason\AppData\Local\Microsoft\WindowsApps;C:\jason\app\node-v22.14.0-win-x64;C:\jason\app\apache-maven-3.6.3\bin;C:\jason\app\Microsoft VS Code\bin;., java.vm.info=mixed mode, sharing, java.vendor=Oracle Corporation, java.vm.version=17.0.10+11-LTS-240, sun.io.unicode.encoding=UnicodeLittle, java.class.version=61.0}
-12:40:34.656 [main] INFO br.com.lkm.taxone.mapper.TaxONEMapperApp -- currentDir:C:\jason\back_lkm\taxone-mapper-api\.
+09:06:05.694 [main] INFO br.com.lkm.taxone.mapper.TaxONEMapperApp -- currentDir:C:\jason\back_lkm\taxone-mapper-api\.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.5)
+
+2025-09-16T09:06:11.750-03:00  INFO 5948 --- [           main] b.com.lkm.taxone.mapper.TaxONEMapperApp  : Starting TaxONEMapperApp v0.0.1-SNAPSHOT using Java 17.0.10 with PID 5948 (C:\jason\back_lkm\taxone-mapper-api\target\taxone-mapper-api.jar started by jason in C:\jason\back_lkm\taxone-mapper-api)
+2025-09-16T09:06:11.753-03:00 DEBUG 5948 --- [           main] b.com.lkm.taxone.mapper.TaxONEMapperApp  : Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-16T09:06:11.755-03:00  INFO 5948 --- [           main] b.com.lkm.taxone.mapper.TaxONEMapperApp  : No active profile set, falling back to 1 default profile: "default"
+2025-09-16T09:06:19.407-03:00  INFO 5948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-16T09:06:19.963-03:00  INFO 5948 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 510 ms. Found 13 JPA repository interfaces.
+2025-09-16T09:06:24.239-03:00  INFO 5948 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8180 (http)
+2025-09-16T09:06:24.360-03:00  INFO 5948 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-16T09:06:24.360-03:00  INFO 5948 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-16T09:06:24.476-03:00  INFO 5948 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-16T09:06:24.480-03:00  INFO 5948 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12237 ms
+2025-09-16T09:06:25.344-03:00  INFO 5948 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-16T09:06:25.643-03:00  INFO 5948 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-16T09:06:25.791-03:00  INFO 5948 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-16T09:06:27.470-03:00  INFO 5948 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-16T09:06:27.648-03:00  INFO 5948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-16T09:06:35.146-03:00  INFO 5948 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./taxone user=SA
+2025-09-16T09:06:35.149-03:00  INFO 5948 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-16T09:06:35.200-03:00  WARN 5948 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-16T09:06:35.431-03:00  INFO 5948 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-16T09:06:39.146-03:00  INFO 5948 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-16T09:06:39.263-03:00  INFO 5948 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-16T09:06:40.903-03:00  INFO 5948 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-16T09:06:42.831-03:00 DEBUG 5948 --- [           main] b.c.l.t.m.web.filter.JwtRequestFilter    : Filter 'jwtRequestFilter' configured for use
+2025-09-16T09:06:47.913-03:00  WARN 5948 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-16T09:06:49.051-03:00  WARN 5948 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-16T09:06:50.754-03:00  INFO 5948 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./taxone'
+2025-09-16T09:06:51.514-03:00  INFO 5948 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8180 (http) with context path '/'
+2025-09-16T09:06:51.560-03:00  INFO 5948 --- [           main] b.com.lkm.taxone.mapper.TaxONEMapperApp  : Started TaxONEMapperApp in 45.271 seconds (process running for 47.796)
+2025-09-16T09:06:58.652-03:00  INFO 5948 --- [nio-8180-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-16T09:06:58.652-03:00  INFO 5948 --- [nio-8180-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-16T09:06:58.654-03:00  INFO 5948 --- [nio-8180-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-16T09:06:59.552-03:00  INFO 5948 --- [nio-8180-exec-1] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:07:07.718-03:00  INFO 5948 --- [nio-8180-exec-9] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:08:14.135-03:00  INFO 5948 --- [nio-8180-exec-8] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:08:27.546-03:00  INFO 5948 --- [io-8180-exec-10] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:08:49.372-03:00  INFO 5948 --- [nio-8180-exec-1] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:09:04.661-03:00  INFO 5948 --- [nio-8180-exec-2] b.c.l.t.m.c.SAFXTableController          : dsTableId:1
+2025-09-16T09:09:05.321-03:00  INFO 5948 --- [nio-8180-exec-5] b.c.l.t.m.c.SAFXTableController          : safxColumns.size():10
+2025-09-16T09:09:09.793-03:00  INFO 5948 --- [nio-8180-exec-9] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:09:29.438-03:00  INFO 5948 --- [nio-8180-exec-3] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:12:31.047-03:00  INFO 5948 --- [nio-8180-exec-7] b.c.l.t.m.c.SAFXTableController          : dsTableId:1
+2025-09-16T09:12:31.062-03:00  INFO 5948 --- [nio-8180-exec-4] b.c.l.t.m.c.SAFXTableController          : safxColumns.size():10
+2025-09-16T09:12:46.967-03:00  INFO 5948 --- [nio-8180-exec-6] b.c.l.t.m.c.SAFXTableController          : dsTableId:1
+2025-09-16T09:12:46.982-03:00  INFO 5948 --- [nio-8180-exec-2] b.c.l.t.m.c.SAFXTableController          : safxColumns.size():10
+2025-09-16T09:24:39.556-03:00  INFO 5948 --- [io-8180-exec-10] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:36:14.321-03:00  INFO 5948 --- [nio-8180-exec-7] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:37:02.633-03:00  INFO 5948 --- [nio-8180-exec-6] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:37:12.788-03:00  INFO 5948 --- [nio-8180-exec-1] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:39:41.347-03:00  INFO 5948 --- [nio-8180-exec-4] b.c.l.t.mapper.service.ScheduleService   : cDeleted:[]
+2025-09-16T09:39:49.250-03:00  INFO 5948 --- [nio-8180-exec-6] b.c.l.t.mapper.service.ScheduleService   : cDeleted:[]
+2025-09-16T09:44:30.151-03:00  INFO 5948 --- [nio-8180-exec-1] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:45:06.022-03:00  INFO 5948 --- [nio-8180-exec-7] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:45:22.403-03:00  INFO 5948 --- [nio-8180-exec-3] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:46:18.107-03:00  INFO 5948 --- [nio-8180-exec-5] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:46:31.112-03:00  INFO 5948 --- [nio-8180-exec-3] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
+2025-09-16T09:46:50.949-03:00  INFO 5948 --- [nio-8180-exec-1] b.c.l.t.mapper.service.MatcherService    : safxPage.getContent().size:10
