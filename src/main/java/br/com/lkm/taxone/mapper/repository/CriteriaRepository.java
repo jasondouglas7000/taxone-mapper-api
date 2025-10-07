@@ -10,6 +10,6 @@ import br.com.lkm.taxone.mapper.entity.Criteria;
 @Repository
 public interface CriteriaRepository extends JpaRepository<Criteria, Integer>{
 
-    @Query("select CASE WHEN COUNT(c) > 0 THEN TRUE ELSE FALSE END FROM Criteria c where c.operator = :operator")
+    @Query("select CASE WHEN COUNT(c) > 0 THEN TRUE ELSE FALSE END FROM Criteria c where c.operator = :operatorx")
     public boolean hasCriteriaWithOperator(@Param("operator") String operator);
 }
