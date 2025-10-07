@@ -56,6 +56,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/authenticate").permitAll()
                         .requestMatchers("/validateCustomerName").permitAll()
                         .requestMatchers("/users/validateUserName").permitAll()
+                        .requestMatchers("/users/hasCriteria").permitAll()
                         .requestMatchers("/h2-console/*").permitAll()
                         .requestMatchers("/swagger-ui/**").permitAll()
                         .requestMatchers("/swagger-ui.html").permitAll()

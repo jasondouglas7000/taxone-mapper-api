@@ -1,5 +1,6 @@
 package br.com.lkm.taxone.mapper.service;
 
+import java.util.List;
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
@@ -13,7 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.lkm.taxone.mapper.dto.PageResponse;
 import br.com.lkm.taxone.mapper.dto.UserDTO;
 import br.com.lkm.taxone.mapper.entity.User;
+import br.com.lkm.taxone.mapper.entity.Criteria;
 import br.com.lkm.taxone.mapper.repository.UserRepository;
+import br.com.lkm.taxone.mapper.repository.CriteriaRepository;
 
 @Service
 public class UserService {
@@ -21,6 +24,8 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	private ModelMapper modelMapper;
+    
+    private CriteriaRepository criteriaRepository;
 	
 	public UserService(UserRepository userRepository, ModelMapper modelMapper) {
 		this.userRepository = userRepository;
@@ -71,4 +76,11 @@ public class UserService {
 		}
 		return modelMapper.map(userRepository.findFirstByName(name), UserDTO.class);
 	}
+    
+    
+    public boolean hasCriteria(){
+        List<Criteria> cs = criteriaRepository.findAll();
+        return cs.size() > 0;
+    }
+    
 }

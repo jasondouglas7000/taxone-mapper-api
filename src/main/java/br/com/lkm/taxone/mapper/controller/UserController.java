@@ -87,5 +87,16 @@ public class UserController {
 	}
 	
 
+	@GetMapping("/hasCriteria")
+	public ResponseEntity<Boolean> hashCriteria(){
+		System.out.println("in hashCriteria");
+		try {
+			Boolean hasCriteria = userService.hasCriteria();
+			return ResponseEntity.ok(hasCriteria);
+		}catch (Exception e) {
+			log.error("Erro verificando se tem criteria criados", e);
+			return ResponseEntity.badRequest().build();
+		}
+	}
 	
 }
