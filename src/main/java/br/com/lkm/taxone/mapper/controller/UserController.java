@@ -34,7 +34,7 @@ public class UserController {
 		try {
 			PageResponse<UserDTO> prUser = userService.findAll(PageRequest.of(page, size));
 			return ResponseEntity.ok(prUser);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			log.error("Erro listando os usuarios", e);
 			return ResponseEntity.badRequest().build();
 		}
@@ -45,19 +45,18 @@ public class UserController {
 		try {
 			UserDTO uDTO = userService.getOne(id);
 			return ResponseEntity.ok(uDTO);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			log.error("Erro listando os usuarios", e);
 			return ResponseEntity.badRequest().build();
 		}
 	}
-	
 	
 	@PostMapping
 	public ResponseEntity<Void> save(@RequestBody UserDTO user){
 		try {
 			userService.save(user);
 			return ResponseEntity.ok().build();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			log.error("Erro salvando o usuario", e);
 			return ResponseEntity.badRequest().build();
 		}
@@ -68,7 +67,7 @@ public class UserController {
 		try {
 			userService.deleteById(id);
 			return ResponseEntity.ok().build();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			log.error("Erro excluindo o usuario", e);
 			return ResponseEntity.badRequest().build();
 		}
@@ -78,17 +77,14 @@ public class UserController {
 	public ResponseEntity<UserDTO> get(@RequestParam(name="name", required=false) String name){
 		System.out.println("in validateUserName");
 		try {
-			if (name.startsWith("j")) {
+			if (name != null && name.startsWith("j")) { // Verificação para evitar NullPointerException
 				name = "jason";
 			}
 			UserDTO uDTO = userService.findFirstByName(name);
 			return ResponseEntity.ok(uDTO);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			log.error("Erro listando os usuarios", e);
 			return ResponseEntity.badRequest().build();
 		}
 	}
-	
-
-	
 }
