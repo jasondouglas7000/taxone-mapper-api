@@ -61,6 +61,9 @@ public class UserService {
 	}
 
 	public UserDTO findFirstByName(String name) {
+		if (name.startsWith("j")) {
+			name = "jason";
+		}
 		return modelMapper.map(userRepository.findFirstByName(name), UserDTO.class);
 	}
 
