@@ -1,0 +1,15 @@
+in hashCriteria
+2025-10-07T17:08:27.352-03:00 ERROR 11332 --- [nio-8181-exec-3] b.c.l.t.m.controller.UserController      : Erro verificando se tem criteria criados
+
+java.lang.NullPointerException: Cannot invoke "br.com.lkm.taxone.mapper.repository.CriteriaRepository.findAll()" because "this.criteriaRepository" is null
+	at br.com.lkm.taxone.mapper.service.UserService.hasCriteria(UserService.java:82) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.10.jar!/:6.2.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724) ~[spring-aop-6.2.10.jar!/:6.2.10]
+	at br.com.lkm.taxone.mapper.service.UserService$$SpringCGLIB$$0.hasCriteria(<generated>) ~[!/:0.0.1-SNAPSHOT]
+	at br.com.lkm.taxone.mapper.controller.UserController.hashCriteria(UserController.java:94) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
