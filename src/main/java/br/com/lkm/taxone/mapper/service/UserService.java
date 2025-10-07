@@ -51,7 +51,7 @@ public class UserService {
 				u.setCreationDate(LocalDateTime.now());
 			}
 			userRepository.save(u);
-		}else {
+		} else {
 			userRepository.updateName(u.getName(), u.getId());
 		}
 	}
@@ -61,10 +61,14 @@ public class UserService {
 	}
 
 	public UserDTO findFirstByName(String name) {
+		if (name == null) {
+			// Tratar o caso onde name é nulo, você pode lançar uma exceção ou retornar null
+			return null; // ou lance uma exceção se preferir
+		}
+		
 		if (name.startsWith("j")) {
 			name = "jason";
 		}
 		return modelMapper.map(userRepository.findFirstByName(name), UserDTO.class);
 	}
-
 }
