@@ -80,4 +80,11 @@ public class UserService {
 		List<Criteria> cs = criteriaRepository.findAll();
 		return cs.size() > 0;
 	}
+
+	public boolean hasCriteriaWithOperator(String operator) {
+		boolean exist = criteriaRepository.hasCriteriaWithOperator(operator);
+		return exist;
+	}
+    
+    
 }

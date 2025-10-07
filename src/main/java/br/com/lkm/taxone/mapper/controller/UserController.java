@@ -99,4 +99,16 @@ public class UserController {
 		}
 	}
 	
+	@GetMapping("/hasCriteriaWithOperator")
+	public ResponseEntity<Boolean> hashCriteriaWithOperator(@RequestParam(name="operator") String operator){
+		System.out.println("in hashCriteria");
+		try {
+			Boolean hasCriteria = userService.hasCriteriaWithOperator(operator);
+			return ResponseEntity.ok(hasCriteria);
+		}catch (Exception e) {
+			log.error("Erro verificando se tem criteria criados", e);
+			return ResponseEntity.badRequest().build();
+		}
+	}
+	
 }
